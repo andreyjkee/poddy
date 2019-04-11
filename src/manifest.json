@@ -5,7 +5,6 @@
   "author": "andreyjkee",
   "version": "0.0.1",
   "description": "A podcast aggregator for Chrome",
-  "default_locale": "en",
   "permissions": [
     "tabs",
     "storage",

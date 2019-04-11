@@ -9,7 +9,7 @@ module.exports = {
     backgroundPage: join(__dirname, 'src/backgroundPage.ts')
   },
   output: {
-    path: join(__dirname, '../angular/dist'),
+    path: join(__dirname, '../dist'),
     filename: '[name].js'
   },
   module: {
