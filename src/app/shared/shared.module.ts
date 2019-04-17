@@ -9,6 +9,7 @@ import {
 import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialIconsService } from './services';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const registerMaterialIcons = (materialIconsService: MaterialIconsService) => {
     return () => materialIconsService.registerIcons();
@@ -17,21 +18,25 @@ const registerMaterialIcons = (materialIconsService: MaterialIconsService) => {
 @NgModule({
     imports: [
         BrowserAnimationsModule,
+        FormsModule,
         MatButtonModule,
         MatCheckboxModule,
         MatIconModule,
         MatListModule,
         MatSidenavModule,
-        MatToolbarModule
+        MatToolbarModule,
+        ReactiveFormsModule
     ],
     exports: [
         BrowserAnimationsModule,
+        FormsModule,
         MatButtonModule,
         MatCheckboxModule,
         MatIconModule,
         MatListModule,
         MatSidenavModule,
-        MatToolbarModule
+        MatToolbarModule,
+        ReactiveFormsModule
     ],
     providers: [
         MaterialIconsService,
