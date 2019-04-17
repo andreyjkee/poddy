@@ -1,4 +1,15 @@
-<h2>Current TAB ID: {{ tabId }}</h2>
-<p>You can easily send messages to the content page with the provided Tab ID!</p>
-<button mat-stroked-button (click)="onClick()">Click me to test</button>
-<div><strong>{{ message }}</strong></div>
+<mat-toolbar>
+    Poddy
+</mat-toolbar>
+<mat-sidenav-container class="example-container">
+    <mat-sidenav mode="side" #sidenav opened>
+        Sidenav content
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <h2>Current TAB ID: {{ tabId }}</h2>
+        <p>You can easily send messages to the content page with the provided Tab ID!</p>
+        <button mat-stroked-button (click)="onClick()">Click me to test</button>
+        <div><strong>{{ message }}</strong></div>
+        <button mat-stroked-button (click)="sidenav.toggle()">Toggle sidenav</button>
+    </mat-sidenav-content>
+</mat-sidenav-container>

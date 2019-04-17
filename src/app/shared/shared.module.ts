@@ -2,22 +2,28 @@ import {
     MatButtonModule,
     MatCheckboxModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatSidenavModule,
+    MatToolbarModule
 } from '@angular/material';
-import { NgModule } from "@angular/core";
+import { NgModule } from '@angular/core';
 
 @NgModule({
     imports: [
         MatButtonModule,
         MatCheckboxModule,
         MatIconModule,
-        MatListModule
+        MatListModule,
+        MatSidenavModule,
+        MatToolbarModule
     ],
     exports: [
         MatButtonModule,
         MatCheckboxModule,
         MatIconModule,
-        MatListModule
+        MatListModule,
+        MatSidenavModule,
+        MatToolbarModule
     ]
 })
 export class SharedModule { }
