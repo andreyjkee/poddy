@@ -3,6 +3,12 @@
   "version": "0.0.1",
   "author": "andreyjkee",
   "description": "Poddy is a google chrome extension developed with Angular",
+  "keywords": [
+    "rss",
+    "podcast",
+    "player"
+  ],
+  "license": "MIT",
   "scripts": {
     "ng": "ng",
     "build:angular": "ng build",

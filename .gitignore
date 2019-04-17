@@ -77,6 +77,9 @@ node_modules/
 # Optional npm cache directory
 .npm
 
+# Ignore npm lock file because we are using yarn
+package-lock.json
+
 # Optional eslint cache
 .eslintcache
 
