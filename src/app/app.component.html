@@ -1,4 +1,7 @@
-<mat-toolbar>
+<mat-toolbar color="primary">
+    <button mat-icon-button type="button" (click)="sidenav.toggle()">
+        <mat-icon svgIcon="menu" aria-label="Menu"></mat-icon>
+    </button>
     Poddy
 </mat-toolbar>
 <mat-sidenav-container class="example-container">
@@ -10,6 +13,5 @@
         <p>You can easily send messages to the content page with the provided Tab ID!</p>
         <button mat-stroked-button (click)="onClick()">Click me to test</button>
         <div><strong>{{ message }}</strong></div>
-        <button mat-stroked-button (click)="sidenav.toggle()">Toggle sidenav</button>
     </mat-sidenav-content>
 </mat-sidenav-container>
