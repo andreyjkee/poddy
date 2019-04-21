@@ -13,9 +13,15 @@ export class MaterialIconsService {
   ) {}
 
   public registerIcons(): void {
-    this.matIconRegistry.addSvgIcon(
-      'menu',
-      this.domSanitizer.bypassSecurityTrustResourceUrl('/assets/images/outline-menu.svg')
-    );
+    const iconNameToPath = {
+      menu: '/assets/images/outline-menu.svg',
+      search: '/assets/images/baseline-search.svg'
+    };
+    Object.entries(iconNameToPath).forEach((entry: [string, string]) => {
+      this.matIconRegistry.addSvgIcon(
+          entry[0],
+          this.domSanitizer.bypassSecurityTrustResourceUrl(entry[1])
+      );
+    });
   }
 }

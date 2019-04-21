@@ -1,8 +1,25 @@
-<mat-toolbar color="primary">
-    <button mat-icon-button type="button" (click)="sidenav.toggle()">
-        <mat-icon svgIcon="menu" aria-label="Menu"></mat-icon>
-    </button>
-    Poddy
+<mat-toolbar color="primary" class="toolbar">
+    <mat-toolbar-row>
+        <button mat-icon-button type="button" (click)="sidenav.toggle()">
+            <mat-icon svgIcon="menu" aria-label="Menu"></mat-icon>
+        </button>
+        <span>
+            Poddy
+        </span>
+        <span class="toolbar__spacer"></span>
+        <div class="toolbar__search">
+            <mat-form-field>
+                <input matInput
+                       placeholder="Search for podcast"
+                       type="text"
+                       (keyup.enter)="handleSearchFieldClick()"
+                       [formControl]="searchFieldControl">
+                <mat-icon matSuffix
+                          svgIcon="search"
+                          (click)="handleSearchFieldClick()"></mat-icon>
+            </mat-form-field>
+        </div>
+    </mat-toolbar-row>
 </mat-toolbar>
 <mat-sidenav-container class="example-container">
     <mat-sidenav mode="side" #sidenav opened>

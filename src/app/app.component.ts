@@ -2,6 +2,7 @@ import { ChangeDetectorRef, Component, Inject } from '@angular/core';
 
 import { TAB_ID } from './tab-id.injector';
 import { MatSidenav } from '@angular/material';
+import { FormBuilder, FormControl } from "@angular/forms";
 
 @Component({
   selector: 'app-poddy',
@@ -11,8 +12,13 @@ import { MatSidenav } from '@angular/material';
 export class AppComponent {
   message: string;
   sidenav: MatSidenav;
+  searchFieldControl: FormControl;
 
-  constructor(@Inject(TAB_ID) private tabId: number, private changeDetector: ChangeDetectorRef) {}
+  constructor(@Inject(TAB_ID) private tabId: number,
+              private changeDetector: ChangeDetectorRef,
+              private formBuilder: FormBuilder) {
+    this.searchFieldControl = this.formBuilder.control('');
+  }
 
   onClick(): void {
     chrome.tabs.sendMessage(this.tabId, 'request', message => {
@@ -23,4 +29,9 @@ export class AppComponent {
       this.changeDetector.detectChanges();
     });
   }
+
+  handleSearchFieldClick(): void {
+    console.log(this.searchFieldControl.value)
+  }
+
 }
