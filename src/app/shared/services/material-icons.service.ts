@@ -14,6 +14,7 @@ export class MaterialIconsService {
 
   public registerIcons(): void {
     const iconNameToPath = {
+      edit: '/assets/images/baseline-edit.svg',
       menu: '/assets/images/outline-menu.svg',
       search: '/assets/images/baseline-search.svg'
     };
