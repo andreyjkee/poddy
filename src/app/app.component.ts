@@ -2,7 +2,7 @@ import { ChangeDetectorRef, Component, Inject } from '@angular/core';
 
 import { TAB_ID } from './tab-id.injector';
 import { MatSidenav } from '@angular/material';
-import { FormBuilder, FormControl } from "@angular/forms";
+import { FormBuilder, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-poddy',
@@ -31,7 +31,7 @@ export class AppComponent {
   }
 
   handleSearchFieldClick(): void {
-    console.log(this.searchFieldControl.value)
+    console.log(this.searchFieldControl.value);
   }
 
 }
