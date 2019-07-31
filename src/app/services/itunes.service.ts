@@ -16,7 +16,7 @@ export class ITunesService {
     constructor(protected httpClient: HttpClient) {
     }
 
-    public search({term, limit = 20}: {term: string, limit: number}): Observable<any> {
+    public search({term, limit = 20}: {term: string, limit?: number}): Observable<any> {
         const params = new HttpParams({
             fromObject: {
                 media: 'podcast',
